@@ -22,6 +22,7 @@ gem 'active_model_serializers'
 gem 'grape-entity'
 
 group :development, :test do
+  gem 'pry'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
