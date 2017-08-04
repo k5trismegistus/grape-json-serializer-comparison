@@ -15,10 +15,14 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 
 # API
+gem 'hashie'
 gem 'grape'
 gem 'jbuilder', '~> 2.5'
+gem 'grape-jbuilder'
 gem 'rabl'
+gem 'grape-rabl'
 gem 'active_model_serializers'
+gem 'grape-active_model_serializers'
 gem 'grape-entity'
 
 group :development, :test do
