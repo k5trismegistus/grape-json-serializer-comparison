@@ -2,7 +2,13 @@ require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 
 class ActiveSupport::TestCase
-    100.times do |i|
+  DatabaseRewinder.clean_all
+
+  ActiveRecord::Base.connection.tables.each do |t|
+    ActiveRecord::Base.connection.execute("DELETE from sqlite_sequence where name = '#{t}'")
+  end
+
+  100.times do |i|
     user = User.create!(name: "user#{i}")
 
     10.times do |j|

@@ -2,7 +2,8 @@ require 'test_helper'
 require 'benchmark'
 
 class UsersAPITest < ActionDispatch::IntegrationTest
-  REQUEST_TRIAL = 10000
+
+  REQUEST_TRIAL = 1000
 
   REQUEST_IDS = (1..REQUEST_TRIAL).map do
     rand(1..100)
