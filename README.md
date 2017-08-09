@@ -1,24 +1,23 @@
-# README
+# Performance comparison of JSON serializers with grape
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Descritption
+Performance comparison of Jbuilder, Rabl, ActiveModel::Serializer and Grape::Entity.
 
-Things you may want to cover:
+## How to test
 
-* Ruby version
+```
+$ bundle install
+$ RAILS_ENV=test bundle exec rake db:setup
+$ bundle exec rake test
+```
 
-* System dependencies
+## In my environment
 
-* Configuration
+```
+Jbuilder: 96.57238899999356
+Rabl: 102.2337039999984
+ActiveModel::Serializer: 97.1561309999961
+Grape::Entity: 77.5971559999889
+```
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Grape::Entity is fastest
